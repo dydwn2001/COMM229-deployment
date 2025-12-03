@@ -22,7 +22,7 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:3005/api';
+const API_BASE_URL = '/api';
 
 export default function Profile() {
   const navigate = useNavigate();

@@ -24,7 +24,7 @@ export default function Cart() {
 
   const fetchCart = async () => {
     try {
-      const res = await fetch(`http://localhost:3005/api/cart/${currentUser._id}`);
+      const res = await fetch(`/api/cart/${currentUser._id}`);
       const data = await res.json();
       setCart(data);
     } catch (err) {
@@ -47,12 +47,12 @@ export default function Cart() {
 
       if (newQuantity <= 0) {
         // Delete item if quantity reaches 0
-        await fetch(`http://localhost:3005/api/cart/${currentUser._id}/${productId}`, {
+        await fetch(`/api/cart/${currentUser._id}/${productId}`, {
           method: 'DELETE',
         });
       } else {
         // Update quantity
-        await fetch(`http://localhost:3005/api/cart/${currentUser._id}/${productId}`, {
+        await fetch(`/api/cart/${currentUser._id}/${productId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ quantity: newQuantity }),

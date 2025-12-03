@@ -13,7 +13,7 @@ import {
 import { Person as PersonIcon, Email as EmailIcon, Lock as LockIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:3005/api';
+const API_BASE_URL = '/api';
 
 export default function Register() {
   const navigate = useNavigate();

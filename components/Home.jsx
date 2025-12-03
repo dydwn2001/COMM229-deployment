@@ -60,7 +60,7 @@ export default function Home() {
             Welcome to PikaPika!
           </Typography>
           <Typography variant="h6" sx={{ maxWidth: 700 }}>
-            Your number one online store for exclusive, high-quality, Pikachu-themed clothing and accessories.
+            The leading online shop for high-quality, one-of-a-kind Pikachu clothing and accessories.
           </Typography>
           <Stack direction="row" spacing={2} mt={2}>
             <Button

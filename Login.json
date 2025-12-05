@@ -1,0 +1,210 @@
+{
+    "title": "Login",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 958,
+            "height": 738,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "http://localhost:5173/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": "PikaPika"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/LOGIN"
+                ],
+                [
+                    "header div.MuiStack-root > a.MuiButton-contained"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/div/div[2]/a[1]"
+                ],
+                [
+                    "pierce/header div.MuiStack-root > a.MuiButton-contained"
+                ]
+            ],
+            "offsetY": 7.38749885559082,
+            "offsetX": 30.82501220703125
+        },
+        {
+            "type": "change",
+            "value": "kimchi100@gmail.com",
+            "selectors": [
+                [
+                    "aria/Email Address"
+                ],
+                [
+                    "#_r_1a_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1a_\"]"
+                ],
+                [
+                    "pierce/#_r_1a_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "kimchi100",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#_r_1b_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1b_\"]"
+                ],
+                [
+                    "pierce/#_r_1b_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div > div > div div > div:nth-of-type(1) > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/div/div/form/div/div[1]/div"
+                ],
+                [
+                    "pierce/div > div > div div > div:nth-of-type(1) > div"
+                ],
+                [
+                    "text/kimchi100@gmail.comEmail"
+                ]
+            ],
+            "offsetY": 33.11250305175781,
+            "offsetX": 31.800003051757812,
+            "duration": 673.5
+        },
+        {
+            "type": "change",
+            "value": "kimchi100@gmail.com",
+            "selectors": [
+                [
+                    "aria/Email Address"
+                ],
+                [
+                    "#_r_1a_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1a_\"]"
+                ],
+                [
+                    "pierce/#_r_1a_"
+                ],
+                [
+                    "text/kimchi100@gmail.com"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#_r_1b_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1b_\"]"
+                ],
+                [
+                    "pierce/#_r_1b_"
+                ]
+            ],
+            "offsetY": 28.11248779296875,
+            "offsetX": 9.79998779296875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#root > div > div > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/div"
+                ],
+                [
+                    "pierce/#root > div > div > div"
+                ]
+            ],
+            "offsetY": 278,
+            "offsetX": 20.800003051757812,
+            "duration": 461
+        },
+        {
+            "type": "change",
+            "value": "kimchi100",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#_r_1b_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_1b_\"]"
+                ],
+                [
+                    "pierce/#_r_1b_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/SIGN IN"
+                ],
+                [
+                    "#root > div > div button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/div/div/form/div/button"
+                ],
+                [
+                    "pierce/#root > div > div button"
+                ]
+            ],
+            "offsetY": 31.11248779296875,
+            "offsetX": 55.80000305175781,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": "PikaPika"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "title": "EditProfile",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 958,
+            "height": 738,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "http://localhost:5173/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": "PikaPika"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/EDIT PROFILE"
+                ],
+                [
+                    "div.MuiStack-root > a:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/div/div[2]/a[2]"
+                ],
+                [
+                    "pierce/div.MuiStack-root > a:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 32.54999923706055,
+            "offsetX": 68.9749755859375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Full Name"
+                ],
+                [
+                    "#_r_v_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_v_\"]"
+                ],
+                [
+                    "pierce/#_r_v_"
+                ],
+                [
+                    "text/dydwn120"
+                ]
+            ],
+            "offsetY": 31.100006103515625,
+            "offsetX": 106.79998779296875
+        },
+        {
+            "type": "change",
+            "value": "dydwn12000",
+            "selectors": [
+                [
+                    "aria/Full Name"
+                ],
+                [
+                    "#_r_v_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_v_\"]"
+                ],
+                [
+                    "pierce/#_r_v_"
+                ],
+                [
+                    "text/dydwn120"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/SAVE CHANGES"
+                ],
+                [
+                    "#root > div > div button.MuiButton-contained"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/div/div/form/div/div[2]/button[2]"
+                ],
+                [
+                    "pierce/#root > div > div button.MuiButton-contained"
+                ],
+                [
+                    "text/Save Changes"
+                ]
+            ],
+            "offsetY": 25.4749755859375,
+            "offsetX": 93.48748779296875
+        }
+    ]
+}

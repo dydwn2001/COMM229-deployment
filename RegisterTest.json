@@ -1,0 +1,228 @@
+{
+    "title": "RegisterTest",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1520,
+            "height": 729,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "http://localhost:5173/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": "PikaPika"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/REGISTER"
+                ],
+                [
+                    "header a.MuiButton-outlined"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/div/div[2]/a[2]"
+                ],
+                [
+                    "pierce/header a.MuiButton-outlined"
+                ]
+            ],
+            "offsetY": 11.1875,
+            "offsetX": 26.625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Full Name"
+                ],
+                [
+                    "#_r_g_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_g_\"]"
+                ],
+                [
+                    "pierce/#_r_g_"
+                ]
+            ],
+            "offsetY": 39.11250305175781,
+            "offsetX": 223.5999755859375
+        },
+        {
+            "type": "change",
+            "value": "dydwn12",
+            "selectors": [
+                [
+                    "aria/Full Name"
+                ],
+                [
+                    "#_r_g_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_g_\"]"
+                ],
+                [
+                    "pierce/#_r_g_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Email Address"
+                ],
+                [
+                    "#_r_h_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_h_\"]"
+                ],
+                [
+                    "pierce/#_r_h_"
+                ]
+            ],
+            "offsetY": 18.11248779296875,
+            "offsetX": 122.5999755859375
+        },
+        {
+            "type": "change",
+            "value": "kimchi100@gmail.com",
+            "selectors": [
+                [
+                    "aria/Email Address"
+                ],
+                [
+                    "#_r_h_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_h_\"]"
+                ],
+                [
+                    "pierce/#_r_h_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#_r_i_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_i_\"]"
+                ],
+                [
+                    "pierce/#_r_i_"
+                ]
+            ],
+            "offsetY": 46.11248779296875,
+            "offsetX": 51.5999755859375
+        },
+        {
+            "type": "change",
+            "value": "kimchi100",
+            "selectors": [
+                [
+                    "aria/Password"
+                ],
+                [
+                    "#_r_i_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_i_\"]"
+                ],
+                [
+                    "pierce/#_r_i_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Confirm Password"
+                ],
+                [
+                    "#_r_j_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_j_\"]"
+                ],
+                [
+                    "pierce/#_r_j_"
+                ]
+            ],
+            "offsetY": 35.11248779296875,
+            "offsetX": 36.5999755859375
+        },
+        {
+            "type": "change",
+            "value": "kimchi100",
+            "selectors": [
+                [
+                    "aria/Confirm Password"
+                ],
+                [
+                    "#_r_j_"
+                ],
+                [
+                    "xpath///*[@id=\"_r_j_\"]"
+                ],
+                [
+                    "pierce/#_r_j_"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/CREATE ACCOUNT"
+                ],
+                [
+                    "#root > div > div button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/div/div/div/form/div/button"
+                ],
+                [
+                    "pierce/#root > div > div button"
+                ]
+            ],
+            "offsetY": 44.11248779296875,
+            "offsetX": 291.5999755859375,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": ""
+                }
+            ]
+        }
+    ]
+}

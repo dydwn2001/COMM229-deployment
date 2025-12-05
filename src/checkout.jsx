@@ -14,7 +14,7 @@ export default function Checkout() {
       if (!currentUser) return;
 
       try {
-        const res = await fetch(`http://localhost:3005/api/cart/${currentUser._id}`);
+        const res = await fetch(`/api/cart/${currentUser._id}`);
         const data = await res.json();
         setCartItems(data.items || []);
       } catch (err) {

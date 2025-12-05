@@ -14,7 +14,7 @@ import {
 import { Save, Cancel, Person, Email } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:3005/api';
+const API_BASE_URL = '/api';
 
 export default function EditProfile() {
   const navigate = useNavigate();

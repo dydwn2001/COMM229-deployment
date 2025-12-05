@@ -33,7 +33,7 @@ export default function Checkout() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3005/api/checkout', {
+      const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: currentUser._id }),

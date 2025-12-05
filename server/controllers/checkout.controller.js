@@ -31,8 +31,8 @@ export const createCheckoutSession = async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: '/success',
-      cancel_url: '/cart',
+      success_url: 'http://localhost:5173/success',
+      cancel_url: 'http://localhost:5173/cart',
     });
 
     console.log('Stripe session creada:', session.url);

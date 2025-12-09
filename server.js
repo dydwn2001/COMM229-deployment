@@ -1,6 +1,6 @@
 import express from "express";
 import config from "./config/config.js";
-import app from "./server/express.js";
+import app from "./server/express.js"; // your existing express app
 import mongoose from "mongoose";
 import Product from "./server/models/product.model.js";
 
@@ -43,21 +43,22 @@ mongoose
     console.error(`Unable to connect to database: ${config.mongoUri}`, err);
   });
 
-// ------------ API ROUTES (YOUR EXISTING ROUTES IN express.js) ------------
-
-// Example API root
+// ------------ API ROUTES ------------
 app.get("/api", (req, res) => {
   res.json({ message: "API is working" });
 });
 
-// ------------ SERVE REACT BUILD (FIX FOR YOUR PROBLEM) ------------
+// Add other API routes here
+// app.use("/api/products", productRoutes);
+// app.use("/api/users", userRoutes);
 
-// Point static files to React build folder
-app.use(express.static(path.join(__dirname, "client", "build")));
+// ------------ SERVE VITE REACT BUILD ------------
+// Serve static files from dist
+app.use(express.static(path.join(__dirname, "dist")));
 
-// Catch-all => return React index.html for ANY non-API route
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// Catch-all route for React Router
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 // ------------ START SERVER ------------

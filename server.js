@@ -1,9 +1,16 @@
 import config from "./config/config.js";
 import app from "./server/express.js";
 import mongoose from "mongoose";
-import Product from "./server/models/product.model.js"; // import your product model
+import Product from "./server/models/product.model.js";
 
-// Mapea productos a los nombres de archivo en public/images
+// Required for ES module __dirname
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// ------------ DATABASE CONNECTION + SEEDING ------------
 const defaultProducts = [
   { name: 'Thunderbolt Hoodie', category: 'Apparel', price: 49.99, image: '/images/hoodie.png' },
   { name: 'Pika Pika T-Shirt', category: 'Apparel', price: 24.99, image: '/images/tshirt.png' },
@@ -22,7 +29,6 @@ mongoose
   .then(async () => {
     console.log("Connected to the database!");
 
-    // Seed default products
     for (const prod of defaultProducts) {
       const exists = await Product.findOne({ name: prod.name });
       if (!exists) {
@@ -36,11 +42,24 @@ mongoose
     console.error(`Unable to connect to database: ${config.mongoUri}`, err);
   });
 
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to The PikaPika Project" });
+// ------------ API ROUTES (YOUR EXISTING ROUTES IN express.js) ------------
+
+// Example API root
+app.get("/api", (req, res) => {
+  res.json({ message: "API is working" });
 });
 
+// ------------ SERVE REACT BUILD (FIX FOR YOUR PROBLEM) ------------
+
+// Point static files to React build folder
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+// Catch-all => return React index.html for ANY non-API route
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+// ------------ START SERVER ------------
 app.listen(config.port, () => {
-  console.info("Server started on port %s.", config.port);
-  console.info("Server URL: http://localhost:%s", config.port);
+  console.info(`Server started on port ${config.port}.`);
 });

@@ -16,16 +16,16 @@ const MainRouter = () => {
   return (
     <Navbar>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/edit-profile" element={<EditProfile />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/success" element={<Success />} />
+        <Route path="./" element={<Home />} />
+        <Route path="./about" element={<About />} />
+        <Route path="./register" element={<Register />} />
+        <Route path="./login" element={<Login />} />
+        <Route path="./edit-profile" element={<EditProfile />} />
+        <Route path="./profile" element={<Profile />} />
+        <Route path="./products" element={<Products />} />
+        <Route path="./cart" element={<Cart />} />
+        <Route path="./checkout" element={<Checkout />} />
+        <Route path="./success" element={<Success />} />
       </Routes>
     </Navbar>
   );

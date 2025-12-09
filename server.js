@@ -1,17 +1,9 @@
-import express from "express";
 import config from "./config/config.js";
-import app from "./server/express.js"; // your existing express app
+import app from "./server/express.js";
 import mongoose from "mongoose";
-import Product from "./server/models/product.model.js";
+import Product from "./server/models/product.model.js"; // import your product model
 
-// Required for ES module __dirname
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// ------------ DATABASE CONNECTION + SEEDING ------------
+// Mapea productos a los nombres de archivo en public/images
 const defaultProducts = [
   { name: 'Thunderbolt Hoodie', category: 'Apparel', price: 49.99, image: '/images/hoodie.png' },
   { name: 'Pika Pika T-Shirt', category: 'Apparel', price: 24.99, image: '/images/tshirt.png' },
@@ -30,6 +22,7 @@ mongoose
   .then(async () => {
     console.log("Connected to the database!");
 
+    // Seed default products
     for (const prod of defaultProducts) {
       const exists = await Product.findOne({ name: prod.name });
       if (!exists) {
@@ -43,25 +36,11 @@ mongoose
     console.error(`Unable to connect to database: ${config.mongoUri}`, err);
   });
 
-// ------------ API ROUTES ------------
-app.get("/api", (req, res) => {
-  res.json({ message: "API is working" });
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to The PikaPika Project" });
 });
 
-// Add other API routes here
-// app.use("/api/products", productRoutes);
-// app.use("/api/users", userRoutes);
-
-// ------------ SERVE VITE REACT BUILD ------------
-// Serve static files from dist
-app.use(express.static(path.join(__dirname, "dist")));
-
-// Catch-all route for React Router
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
-
-// ------------ START SERVER ------------
 app.listen(config.port, () => {
-  console.info(`Server started on port ${config.port}.`);
+  console.info("Server started on port %s.", config.port);
+  console.info("Server URL: http://localhost:%s", config.port);
 });
